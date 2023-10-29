@@ -9,7 +9,7 @@ from seaborn.palettes import blend_palette
 
 # Nome e descrição
 st.title('Simulação de um trocador de calor tubular simples')
-st.write('Este site simula um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura no trocador de calor conforme o tempo passa. Você também poderá visualizar o gráfico de variação da temperatura quando o trocador atinge o regime permanente,')
+st.write('Este site simula um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura no trocador de calor conforme o tempo passa. Você também poderá visualizar o gráfico de variação da temperatura quando o trocador atinge o regime permanente.')
 
 # Carregar a imagem
 st.image('Caso 2.png', use_column_width=True)
