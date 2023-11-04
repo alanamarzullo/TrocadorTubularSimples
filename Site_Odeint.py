@@ -9,7 +9,7 @@ from seaborn.palettes import blend_palette
 
 # Nome e descrição
 st.title('Simulação de um trocador de calor tubular simples')
-st.write('Este site simula um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura do fluido no trocador de calor conforme o tempo passa. Você também poderá visualizar o gráfico de variação da temperatura quando o trocador atinge o regime permanente.')
+st.write('Este site simula um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura no trocador de calor conforme o tempo passa. Você também poderá visualizar o gráfico de variação da temperatura quando o trocador atinge o regime permanente.')
 
 # Carregar a imagem
 st.image('Caso 2.png', use_column_width=True)
@@ -37,7 +37,6 @@ if st.button('Rodar Simulação'):
     T = np.ones(n) * T0
     dTdt = np.zeros(n)
     t = np.arange(0, t_final, dt)
-    T_out = [T]
 
     # Cálculo de T em regime permanente
     T_permanente = Ti + q_fluxo * 2 * np.pi * r * x / (m * Cp)
@@ -62,7 +61,7 @@ if st.button('Rodar Simulação'):
     # Criação do DataFrame
     df_Temp = pd.DataFrame(np.array(T_out), columns=x)
 
-    # Create uma paleta de cores
+    # Criando uma paleta de cores
     paleta_calor = blend_palette(['yellow', 'orange','red'], as_cmap=True, n_colors=100)
 
     # Função que atualiza o plot
