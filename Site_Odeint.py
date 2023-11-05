@@ -18,7 +18,7 @@ st.write('Figura exemplificando o trocador. Autoria própria.')
 # Valores input
 L = st.number_input('Comprimento do tubo (m)', min_value=0)
 r = st.number_input('Raio do tubo (m)', min_value=0.0)
-n = st.number_input('Número de nós para a discritização', min_value=1)
+n = st.number_input('Número de nós para a discretização', min_value=1)
 m = st.number_input('Vazão Mássica (kg/s)', min_value=0.0)
 Cp = st.number_input('Capacidade de calor específico do fluido (J/kg.K)', min_value=0.0)
 rho = st.number_input('Massa específica do fluido (kg/m³)', min_value=0.0)
