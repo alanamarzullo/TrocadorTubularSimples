@@ -18,12 +18,12 @@ st.write('Figura exemplificando o trocador. Autoria própria.')
 # Valores input
 L = st.number_input('Comprimento do tubo (m)', min_value=0)
 r = st.number_input('Raio do tubo (m)', min_value=0.0)
-n = st.number_input('Número de nós para a discretização', min_value=1)
+n = st.number_input('Número de nós para a discritização', min_value=1)
 m = st.number_input('Vazão Mássica (kg/s)', min_value=0.0)
 Cp = st.number_input('Capacidade de calor específico do fluido (J/kg.K)', min_value=0.0)
 rho = st.number_input('Massa específica do fluido (kg/m³)', min_value=0.0)
 Ti = st.number_input('Temperatura de entrada do fluido (K)')
-T0 = st.number_input('Temperatura inicial do tubo (K)')
+T0 = st.number_input('Temperatura inicial do trocador (K)')
 q_fluxo = st.number_input('Fluxo de calor (W/m²)', min_value=0.0)
 t_final = st.number_input('Tempo de simulação (s)', min_value=0.0)
 dt = st.number_input('Passo de tempo (s)', min_value=0.0)
@@ -39,7 +39,7 @@ if st.button('Rodar Simulação'):
     t = np.arange(0, t_final, dt)
 
     # Cálculo de T em regime permanente
-    T_permanente = Ti + q_fluxo * 2 * np.pi * r * x / (m * Cp)
+    #T_permanente = Ti + q_fluxo * 2 * np.pi * r * x / (m * Cp)
     
     # Criando a figura para o gráfico em regime permanente
     fig_permanente = plt.figure(figsize=(5, 4))
@@ -75,19 +75,19 @@ if st.button('Rodar Simulação'):
     ani = FuncAnimation(fig_animacao, update_plot, frames=df_Temp.shape[0], repeat=False)
 
     # Salvar a animação como gif
-    ani.save('Variação da Temperatura - Caso 2.gif', writer='pillow', fps=10)
+    ani.save('Variação da Temperatura - Caso I.gif', writer='pillow', fps=10)
     
     # Exibindo a simulação
     with st.expander("Visualização da Simulação em tempo real (Clique aqui para ver)"):
-        st.image('Variação da Temperatura - Caso 2.gif')
+        st.image('Variação da Temperatura - Caso I.gif')
     
     #Exibindo o gráfico de variação da temperatura ao longo do comprimento em regime permanente
-    st.write('Gráfico da variação da temperatura ao longo do comprimento em regime permanente')
-    plt.figure(fig_permanente)
-    plt.plot(x, T_permanente, color='blue')  
-    plt.xlabel('Comprimento (x)')
-    plt.ylabel('Temperatura (°C)')
-    st.pyplot(plt)
+    st.write('Em construção: Gráfico da variação da temperatura ao longo do comprimento em regime permanente')
+    # plt.figure(fig_permanente)
+    # plt.plot(x, T_permanente, color='blue')  
+    # plt.xlabel('Comprimento (x)')
+    # plt.ylabel('Temperatura (°C)')
+    # st.pyplot(plt)
 
 
 
