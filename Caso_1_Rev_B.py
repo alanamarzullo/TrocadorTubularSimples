@@ -73,7 +73,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     #Exibindo o gráfico de variação da temperatura ao longo do comprimento em regime permanente
     plt.figure(fig_permanente)
     plt.plot(x, T_permanente_atual, color='blue')  
-    plt.xlabel('Comprimento (x)')
+    plt.xlabel('Comprimento (m)')
     plt.ylabel('Temperatura (°C)')
     st.pyplot(plt)
 
