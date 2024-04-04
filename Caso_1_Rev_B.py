@@ -72,7 +72,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     
     #Exibindo o gráfico de variação da temperatura ao longo do comprimento em regime permanente
     plt.figure(fig_permanente)
-    plt.plot(x, T_permanente_atual, color='blue')  
+    plt.plot(x, T_permanente_atual - 273.15, color='blue')  
     plt.xlabel('Comprimento (m)')
     plt.ylabel('Temperatura (°C)')
     st.pyplot(plt)
@@ -100,4 +100,4 @@ dt = st.number_input('Passo de tempo (s)', min_value=0.0)
 if st.button('Rodar Simulação'):
     run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt)
 elif st.button('Rodar exemplo padrão'):
-    run_simulation(10, 0.1, 100, 0.1, 4180, 1000, 200, 500, 5000, 1000, 1)
+    run_simulation(50, 0.1, 100, 3, 4180, 1000, 400, 300, 100000, 700, 1)
