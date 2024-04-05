@@ -81,7 +81,8 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     st.pyplot(plt)
 
 st.title('Simulação de um trocador de calor tubular simples')
-st.write('Este site simula um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura do fluido ao longo do trocador conforme o tempo passa. Você também poderá visualizar as temperaturas em regime permanente ao longo do comprimento do trocador.')
+st.write('Este é um simulador de um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura do fluido ao longo do trocador conforme o tempo passa. Você também poderá visualizar as temperaturas em regime permanente ao longo do comprimento do trocador.')
+st.write('Ao final desta página, você também encontrará um botão que roda a simulação com um exemplo pré-definido.')
 
 # Carregar a imagem
 st.image('Caso 1.png', use_column_width=True)
