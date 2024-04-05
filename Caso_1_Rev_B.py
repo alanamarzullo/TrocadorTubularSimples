@@ -45,6 +45,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
         plt.title(f'Tempo: {t} (s)')
         plt.xlabel('Comprimento (m)')
         plt.ylabel('Temperatura (°C)')
+        plt.colorbar(label='T(°C)')
         
     # Criando a animação
     ani = FuncAnimation(fig_animacao, update_plot, frames=df_Temp.shape[0], repeat=False)
