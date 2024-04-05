@@ -51,7 +51,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     ani = FuncAnimation(fig_animacao, update_plot, frames=df_Temp.shape[0], repeat=False)
 
     # Salvar a animação como gif
-    ani.save('Variação da Temperatura - Caso I.gif', writer='pillow', fps=10)
+    save = ani.save('Variação da Temperatura - Caso I.gif', writer='pillow', fps=10)
     
     # Exibindo a simulação
     with st.expander("Visualização da Simulação em tempo real para o fluido (Clique aqui para ver)"):
