@@ -47,6 +47,9 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     # Criando a animação
     ani = FuncAnimation(fig_animacao, update_plot, frames=df_Temp.shape[0], repeat=False)
 
+    plt.xlabel('Comprimento (m)') 
+    plt.ylabel('Temperatura (°C)')
+
     # Salvar a animação como gif
     save = ani.save('Variação da Temperatura - Caso I.gif', writer='pillow', fps=10)
     
