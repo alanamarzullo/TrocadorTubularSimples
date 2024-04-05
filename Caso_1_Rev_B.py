@@ -15,10 +15,10 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     t = np.arange(0, t_final, dt)
     
     # Criando a figura para o gráfico em regime permanente
-    fig_permanente = plt.figure(figsize=(5, 4))
+    fig_permanente = plt.figure(figsize=(8, 6))
 
     #Criando figura para a animação
-    fig_animacao = plt.figure(figsize=(5, 4))
+    fig_animacao = plt.figure(figsize=(8, 6))
 
     # Função que define a EDO para a variação da temperatura
     def dTdt_function(T, t):
