@@ -17,9 +17,6 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     # Criando a figura para o gráfico em regime permanente
     fig_permanente = plt.figure(figsize=(8, 6))
 
-    #Criando figura para a animação
-    fig_animacao = plt.figure(figsize=(8, 6))
-
     # Função que define a EDO para a variação da temperatura
     def dTdt_function(T, t):
         dTdt = np.zeros(n)
@@ -43,7 +40,12 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
         line = pd.DataFrame(df_Temp.iloc[t, :]).T
         sns.heatmap(line, cmap=paleta_calor)
         plt.title(f'Tempo: {t} (s)')
-        
+
+    #Criando figura para a animação
+    fig_animacao = plt.figure(figsize=(8, 6))
+    plt.xlabel('Comprimento (m)')
+    plt.ylabel('Temperatura (°C)')
+    
     # Criando a animação
     ani = FuncAnimation(fig_animacao, update_plot, frames=df_Temp.shape[0], repeat=False)
 
