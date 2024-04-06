@@ -42,10 +42,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
         plt.title(f'Tempo: {t} (s)')
 
     #Criando figura para a animação
-    fig_animacao = plt.figure(figsize=(12, 10))
-    plt.xlabel('Comprimento (m)')
-    plt.ylabel('Temperatura (°C)')
-    st.pyplot(plt)
+    fig_animacao = plt.figure(figsize=(8, 6))
     
     # Criando a animação
     ani = FuncAnimation(fig_animacao, update_plot, frames=df_Temp.shape[0], repeat=False)
@@ -55,6 +52,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     
     # Exibindo a simulação
     with st.expander("Visualização da Simulação em tempo real para o fluido (Clique aqui para ver)"):
+        st.write('Variação da temperatura do fluido que passa pelo trocador ao longo do tempo e do comprimento.')
         st.image('Variação da Temperatura - Caso I.gif')
 
     # Inicialização de variáveis
