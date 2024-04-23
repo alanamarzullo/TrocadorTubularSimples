@@ -26,7 +26,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     
     # Resolvendo a EDO usando o odeint
     T_out = odeint(dTdt_function, T, t)
-    T_out = T_out - 273.15
+    T_out = T_out
     
     # Criação do DataFrame
     df_Temp = pd.DataFrame(np.array(T_out), columns=x)
@@ -59,7 +59,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     plt.figure(fig_permanente)
     plt.plot(x, df_Temp.iloc[-1, :], color='blue')  
     plt.xlabel('Comprimento (m)')
-    plt.ylabel('Temperatura (°C)')
+    plt.ylabel('Temperatura (K)')
     st.pyplot(plt)
 
 st.title('Simulador TROCAL - Simulação de um trocador de calor tubular simples')
