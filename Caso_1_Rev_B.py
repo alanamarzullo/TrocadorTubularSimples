@@ -67,7 +67,7 @@ st.write('Este é um simulador de um trocador de calor tubular simples que aquec
 st.write('ATENÇÃO: Ao final desta página, você também encontrará um botão que roda a simulação com um exemplo pré-definido. Este exemplo leva em torno de 3 minutos para rodar.')
 
 # Carregar a imagem
-st.image('Caso I.png', use_column_width=True)
+st.image('Caso 1.png', use_column_width=True)
 st.write('Figura exemplificando o trocador. Autoria própria.')
 
 # Valores input
