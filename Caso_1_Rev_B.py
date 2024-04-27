@@ -61,6 +61,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     plt.plot(x, df_Temp.iloc[-1, :], color='blue')  
     plt.xlabel('Comprimento (m)')
     plt.ylabel('Temperatura (K)')
+    plt.title('Temperatura do fluido ao longo do comprimento do trocador no regime permanente.')
     st.pyplot(plt)
 
 st.title('Simulador TROCAL - Simulação de um trocador de calor tubular simples')
