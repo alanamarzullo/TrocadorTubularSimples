@@ -53,7 +53,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     # Exibindo a simulação
     with st.expander("Visualização da Simulação em tempo real para o fluido (Clique aqui para ver)"):
         st.write('Variação da temperatura do fluido que passa pelo trocador ao longo do tempo e do comprimento.')
-        st.write('Tempo representado acima do GIF, em segundos. Temperaturas em Kelvin representadas na escala variável do eixo y. Comprimento do trocador representado no eixo x do GIF.')
+        st.write('Tempo representado acima do GIF, em segundos. Temperaturas em Kelvin representadas na escala variável do eixo y. Comprimento do trocador representado em metros no eixo x do GIF.')
         st.image('Variação da Temperatura - Caso I.gif')
 
     #Exibindo o gráfico de variação da temperatura ao longo do comprimento em regime permanente
@@ -65,7 +65,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
 
 st.title('Simulador TROCAL - Simulação de um trocador de calor tubular simples')
 st.write('Este é um simulador de um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura do fluido ao longo do trocador conforme o tempo passa. Você também poderá visualizar as temperaturas em regime permanente ao longo do comprimento do trocador.')
-st.write('Este simulador utiliza a seguinte equação de balanço de energia:')
+st.write('Este simulador utiliza a seguinte equação de balanço de energia para o fluido que passa pelo trocador:')
 st.image('Equacao Caso 1.png', use_column_width=True)
 st.write('ATENÇÃO: Ao final desta página, você também encontrará um botão que roda a simulação com um exemplo pré-definido ("Rodar exemplo padrão"). Este exemplo leva em torno de 3 minutos para rodar. Caso queira usar seus próprios valores, use o botão "Rodar simulação" e recomenda-se utilizar um número de nós pelo menos igual ou maior que 10, para melhor visualização dos resultados.')
 
