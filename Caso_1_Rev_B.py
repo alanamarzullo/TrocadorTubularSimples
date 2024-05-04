@@ -77,7 +77,7 @@ st.write('Abaixo há uma figura exemplificando este trocador, de autoria própri
 st.image('Caso 1.png', use_column_width=True)
 
 # Valores input
-L = st.number_input('Comprimento do tubo (m)', min_value=0)
+L = st.number_input('Comprimento do tubo (m)', min_value=0.0)
 r = st.number_input('Raio do tubo (m)', min_value=0.0)
 n = st.number_input('Número de nós para a discritização', min_value=1)
 m = st.number_input('Vazão Mássica (kg/s)', min_value=0.0)
