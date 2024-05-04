@@ -93,4 +93,4 @@ dt = st.number_input('Passo de tempo (s)', min_value=0.0)
 if st.button('Rodar Simulação'):
     run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt)
 elif st.button('Rodar exemplo padrão'):
-    run_simulation(25, 0.1, 100, 3, 4180, 1000, 400, 300, 10000, 350, 1)
+    run_simulation(10, 0.1, 10, 3, 4180, 1000, 400, 300, 10000, 210, 1)
