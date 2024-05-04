@@ -10,7 +10,7 @@ from seaborn.palettes import blend_palette
 
 def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     dx = L / n
-    x = np.linspace(dx/2, L-dx/2, n)
+    x = np.linspace(0, L, n)
     T = np.ones(n) * T0
     t = np.arange(0, t_final, dt)
     
