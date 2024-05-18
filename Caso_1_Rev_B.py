@@ -67,15 +67,13 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
 
 st.title('Simulador TROCAL - Simulação de um trocador de calor tubular simples')
 st.write('Este é um simulador de um trocador de calor tubular simples que aquece um fluido conforme o mesmo passa por ele. Ao rodar a simulação, você poderá visualizar o perfil de temperatura do fluido ao longo do trocador conforme o tempo passa. Você também poderá visualizar as temperaturas em regime permanente ao longo do comprimento do trocador.')
+st.write('Abaixo há uma figura exemplificando este trocador, de autoria própria.')
+st.image('Caso 1.png', use_column_width=True)
 st.write('Uma aplicação para este caso são as serpentinas utilizadas em sistemas de aquecimento de passagem. As serpentinhas consistem em tubos ou sistemas de tubos nos quais passam fluidos que são aquecidos por uma fonte externa de calor.')
 st.write('Este caso também pode representar qualquer tubulação industrial utilizada para aquecer fluidos através de uma fonte externa de calor.')
 st.write('Este simulador utiliza a seguinte equação de balanço de energia para o fluido que passa pelo trocador:')
 st.image('Equacao Caso 1.jpg', use_column_width=True)
 st.write('ATENÇÃO: Ao final desta página, você também encontrará um botão que roda a simulação com um exemplo pré-definido ("Rodar exemplo padrão"). Este exemplo leva em torno de 30 segundos para rodar, a depender da sua velocidade de conexão. Caso queira usar seus próprios valores, use o botão "Rodar simulação" e recomenda-se utilizar um número de nós pelo menos igual ou maior que 10, para melhor visualização dos resultados.')
-
-# Carregar a imagem
-st.write('Abaixo há uma figura exemplificando este trocador, de autoria própria.')
-st.image('Caso 1.png', use_column_width=True)
 
 # Valores input
 L = st.number_input('Comprimento do tubo (m)', min_value=0.0)
