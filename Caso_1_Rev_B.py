@@ -71,7 +71,7 @@ st.write('Abaixo há uma figura exemplificando este trocador, de autoria própri
 st.image('Caso 1.png', use_column_width=True)
 st.write('Uma aplicação para este caso são as serpentinas utilizadas em sistemas de aquecimento de passagem. As serpentinhas consistem em tubos ou sistemas de tubos nos quais passam fluidos que são aquecidos por uma fonte externa de calor.')
 st.write('Este caso também pode representar qualquer tubulação industrial utilizada para aquecer fluidos através de uma fonte externa de calor.')
-st.write('Este simulador utiliza a seguinte equação de balanço de energia para o fluido que passa pelo trocador:')
+st.write('Este simulador utiliza a seguinte equação de balanço de energia para o fluido que passa pelo trocador, considerando o princípio de conservação de energia:')
 st.image('Equacao Caso 1.jpg', use_column_width=True)
 st.write('ATENÇÃO: Ao final desta página, você também encontrará um botão que roda a simulação com um exemplo pré-definido ("Rodar exemplo padrão"). Este exemplo leva em torno de 30 segundos para rodar, a depender da sua velocidade de conexão. Caso queira usar seus próprios valores, use o botão "Rodar simulação" e recomenda-se utilizar um número de nós pelo menos igual ou maior que 10, para melhor visualização dos resultados.')
 
